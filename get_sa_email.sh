@@ -1,12 +1,4 @@
-
 #!/bin/bash -ex
-
-# echo "$SHELL"
-
-# echo "$(lsof -p $$)"
-echo "$@"
-
-exit 1
 
 # Extract JSON args into shell variables
 JQ=$(command -v jq || true)
