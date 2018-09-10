@@ -4,7 +4,7 @@
 JQ=$(command -v jq || true)
 [[ -z "${JQ}" ]] && echo "ERROR: Missing command: 'jq'" >&2 && exit 1
 
-eval "$(${JQ} -r '@sh "INSTANCE=\(.instance_group)  PROJECT=\(.project)"')"
+eval "$(${JQ} -r '@sh "INSTANCE=\(.instance)  PROJECT=\(.project)"')"
 
 TMP_DIR=$(mktemp -d)
 function cleanup() {
